@@ -1,0 +1,209 @@
+<!-- Kate Blunt's final project
+12/8/2019 -->
+<!DOCTYPE html> 
+<html lang="en">
+
+    
+<head> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Busy Bees' Recipes </title>
+    <!-- Link for Font -->
+   <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/favicon.ico.png">
+    <link rel="stylesheet" href="../styles/normalize.css">
+     <link rel="stylesheet" href="../styles/cookie.css">
+    <link rel="stylesheet" href="../styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
+</head>
+    
+    
+    <body>
+        <header>
+            <a href = "../index.html">  <img src="../images/bee.jpg" alt="Bee"
+                height="80"> </a> 
+        <h2><span class="shadow"> Busy Bees' Recipes </span></h2>
+            <h3> Recipes for busy people! </h3>
+        </header>
+         <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+        
+        <ul>
+            <li><a href ="../index.html"> Home </a></li>
+            <li><a> Breakfast </a>
+                <ul>
+                    
+                    <li> <a href ="../meals/burritos.html"> Breakfast burrito </a></li>
+                </ul>
+                </li>
+            <li><a> Dinner </a>
+                <ul>
+                    <li> <a href ="../meals/lasagna.html"> Lasagna </a></li>
+                
+                </ul>
+                </li>
+            <li><a> Dessert </a> 
+                <ul>
+                    <li> <a href ="../meals/pudding.html"> Pistachio Pudding </a></li>
+                    
+                </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+        <section>
+        <h2> <span class="shadow">
+            Holiday Cookie Order Form</span></h2>   
+        
+            <p> To view the table on how many cookies you should order based on the the amount of people you want to feed, click <a href= "../meals/cookietable.html"> here. </a></p>
+        <br>
+            
+            <!-- The form -->
+    
+            <form action="../meals/order.html" method="get" name="order" id="order">
+                <fieldset>
+                    <legend>Customer Information </legend>
+                 <label for="firstName">First name:</label>
+            <input type="text" name="firstName" id="firstName" autofocus required><br>
+            <label for="lastName">Last name:</label>
+            <input type="text" name="lastName" id="lastName" required><br>
+            <label for="address"> Address:</label>
+            <input type="text" name="address" id="address" required> <br>
+            <label for="city"> City :</label>
+            <input type="text" name="city" id="city" required><br>
+            <label for="state"> State:</label>
+            <input type="text" name="state" id="state" required maxlength="2" placeholder="2-character code"><br>      
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required><br>
+            <label for="zipCode">Zip code:</label>
+            <input type="text" name="zipCode" id="zipCode" required placeholder="Your 5 to 9 digit Zip Code" pattern="^\d{5}(-\d{4})?$"title="99999-9999"><br>
+            </fieldset>      
+             <!-- end of member info section -->
+                
+            <!-- Start of Ordering cookie info -->
+            
+            <fieldset>
+            <legend>Cookie </legend>
+            <label for="cookieType"> Cookie Type:</label>
+                <select name ="cookieType" id="cookieType">
+                    <option value="C"> Chocolate Chip</option>
+                    <option value="W"> White Chocolate Chip </option>
+                    <option value="S"> Snickerdoodle</option>
+                </select><br>
+            
+            <label for="cookieQuantity">Number of Cookies: </label>
+                <input type="text" name="cookieQuantity" id="cookieQuantity"  required placeholder="4, 8, 12 or 25"> <br>
+            </fieldset>
+                
+            <fieldset>
+            <legend> Extras to go in mix (Pick two at no extra cost!) </legend>
+            
+                <input type="checkbox" name="cran" id="cran" value="cran">
+					<label for="cran"> Cranberries</label>
+                
+                 <input type="checkbox" name="walnuts" id="walnuts" value="walnuts">
+					<label for="walnuts"> Walnuts </label>
+                
+                 <input type="checkbox" name="heath" id="heath" value="heath">
+					<label for="heath"> Heath Chunks </label>
+                
+                 <input type="checkbox" name="butter" id="butter" value="butter">
+					<label for="butter"> Butterscotch Bits</label>
+                
+            
+           
+            </fieldset>
+            <!-- end of ordering cookie info -->
+                
+                 <fieldset id="radio">
+					<legend>Payment Method</legend>
+					<input type="radio" name="paymentType" id="bill" value="bill">
+					<label for="bill">Bill Me</label>
+					<input type="radio" name="paymentType" id="credit" value="credit">
+					<label for="credit">Credit Card</label>
+				</fieldset>
+                
+            <!-- payment info -->
+             <!-- start payment info section --> 
+                <fieldset>
+					<legend>Credit Card Information</legend>
+					<label for="cardType">Card Type:</label>
+					<select name="cardType" id="cardType">
+				    	<option value="v">Visa</option>
+				    	<option value="m">MasterCard</option>            
+				    	<option value="d">Discovery</option>
+					</select><br>
+					<label for="cardNumber">Card Number:</label>
+					<input type="text" name="cardNumber" id="cardNumber" required
+				    	   pattern="\d{16}" placeholder="16 digits" title="Must be 16 digits"><br>
+					<label for="expMonth">Expiration date:</label>
+						<select name="expMonth" id="expMonth">
+							<option value="1">January</option>
+							<option value="2">February</option>
+							<option value="3">March</option>
+							<option value="4">April</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">August</option>
+							<option value="9">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
+						</select>
+						<select name="expYear" id="expYear">
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+						</select><br>		
+				</fieldset>
+            <!-- end the payment section -->
+                
+            <!-- submit the form -->    
+				    <label>&nbsp;</label>
+					<input type="submit" id="submit" value="Submit">
+					<br>
+            
+            </form>
+        
+        
+            </section>
+            
+        <aside>
+            <nav id="nav_list">
+             <ul>
+            <li><a href ="../meals/thanks.html" class="current"> Special thanks </a></li>
+           
+            <li><a href ="https://thepioneerwoman.com/cooking_cat/16-minute-meals/" target="_blank"> 16-Minute Meals </a></li>
+                 <li><a href ="cookie.html"> Holiday Cookies </a></li>
+                 
+            <li><a href="../meals/video.html"> Cockatiel Cookies </a></li>
+            </ul>
+            </nav>
+              
+        </aside>    
+            
+            
+            
+        </main>
+            
+        
+        <footer>
+        
+            <p>  If you have any questions, comments, or have a recipe you would like me to add, feel free to <a href="mailto:support@busybee.com?cc=kate@busybee.com&Subject=Question"> Email me.</a></p>
+        
+        </footer>
+          </body>
+    
+    
+</html>
+    
+    

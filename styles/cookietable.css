@@ -1,0 +1,417 @@
+/*Kate Blunt
+November 22nd, 2019
+This is the main css for the cookie table page. */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    background-image: url("../images/background.jpg");
+    
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 95%;
+    max-width: 800px;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid #8B008B;
+    box-shadow: 2px 3px 2px 2.5px;
+
+}
+
+a {
+    color: red;
+
+}
+
+a:hover, a:focus {
+    color:#4B0082;
+    
+}
+
+
+#nav_menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+    
+}
+
+#nav_menu ul li {
+	float: left;
+   width: 25%;          /*moved the width on the one down below (200px to change it) */
+}
+#nav_menu ul li a {
+    display: block;
+    text-align: center;
+    padding-top:1em;
+    padding-bottom: 1em;
+    text-decoration: none;
+    background-color: #FFB6C1;
+    color: #C71585;
+    font-weight: bold;
+    border-bottom: 1px solid #8B008B;
+    border-left: 1px solid #8B008B;
+    border-right: 1px solid #8B008B;
+}
+
+
+/* Top menu */
+
+/*flex layout*/
+#nav_menu ul {
+    
+    display: flex;
+    flex-basis:100%;
+    justify-content: space-around;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+/*flex layout*/
+#nav_menu ul li {
+    flex-basis: 25%;
+}
+#nav_menu a.current {
+	color: 	#4B0082;
+}
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+/*flex layout*/
+#nav_menu ul ul li {
+	/*float:none;*/
+    width: 25%;
+}
+
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#nav_menu a:hover, a:focus {
+    color: #4B0082;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*
+#nav_menu ul ul li a:hover, #nav_menu ul li a a:focus {
+    
+    background-color: #FF69B4;
+    
+} */
+
+/* side menu */
+#nav_list ul {
+    list-style-type: none;
+    padding-left: 1em;
+     
+}
+
+#nav_list ul li
+{
+    width: 93.75%;       /*154 divided by 200 times 100 */
+    margin-bottom: .5em;
+    border: 2px solid ;
+    position: relative;
+    /*
+    text-align:center; */
+    border-radius: 20px 20px 20px 20px;
+    background-color:#FFB6C1;
+    line-height: 2.5em;
+    border: 2px solid #8B008B;
+}
+
+#nav_list ul li a {
+    display: block;
+    padding: .5em 0 .5em 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    color: #C71585;
+
+    
+    
+}
+
+
+
+#nav_list ul li a:hover, ul li a:focus {
+    color: #4B0082;
+}
+header { 
+    background-image: -webkit-linear-gradient(white 0%, #FFFF66 75%, #FFFF33 100%);
+    background-image: -moz-linear-gradient(white 0%, #FFFFF66 75%, #FFFF33 100%);
+    background-image: -o-linear-gradient(white 0%, #FFFF66 75%, #FFFF33 100%);
+    background-image: linear-gradient(white 0%, #FFFF66 75%, #FFFF33 100%);
+    padding: 30px;
+    border-bottom: 2px solid #8B008B;   
+} 
+
+header img {
+    float: left;
+    border: 1px solid black; 
+    min-width: 40px;
+    max-width: 20%; 
+    
+}
+
+header h2 {
+    font-size: 350%;
+    text-align: center;
+    padding-bottom: .25em;
+    padding-right: 1em;
+    /*
+    font-style: italic; */
+    color:#8B008B ;
+    /*web font*/
+    font-family: 'Reenie Beanie', cursive;
+    
+}
+
+header h3 {
+text-align: center;
+    padding-right: 2em;
+    color: #C71585;
+}
+
+
+/*flex layout for main*/
+main{
+    display: flex;
+}
+
+
+
+/*table CSS*/
+
+
+table {
+    margin-left: 11.5em;
+}
+
+th, td {
+   padding-right: 3em; 
+    padding-bottom: .5em;
+    padding-top: .25em
+    
+     
+}
+
+/*td:nth-child(4n){
+     border-top: 1px solid purple;
+}*/
+
+tr:nth-child(1n)  {border-top: thin solid purple;}
+
+
+td:last-child {
+    background-color: pink;
+    
+}
+th:last-child, td:last-child {
+	text-align: right;
+	padding-right: 0em;        
+    
+}
+.left_align {
+    vertical-align: top;
+    font-weight: bold;
+    /*border-top: 1px solid purple;*/
+}
+th {
+    text-align: left;
+    color: purple; 
+    text-decoration: underline;
+    padding-top: .5em;
+}
+
+figure {
+    margin-top: 0;
+}
+
+figcaption {
+    padding-left: 9.5em;
+    color: #8B008B;
+    font-size: 150%;
+}
+/*section*/
+{
+    float: right; 
+}
+/*flex layout for the section */
+
+section {
+ 
+   flex-basis: 70%;
+    order:2;
+    /*width: 70%;*/    
+    /*float: right; */
+    padding-right: 2em; 
+}
+section h2 {
+  
+    font-size: 180%;
+    padding-left: 5em;
+    padding-bottom: .5em;
+    padding-top: 1em; 
+    color: #8B008B;
+    text-align: center;
+    
+}
+  
+section a {
+    color: purple;
+}
+
+.shadow {
+    text-shadow: 2px 2px #D8BFD8; 
+}
+
+section h3 {
+    padding-left: 1.69em;
+    padding-bottom: .5em;
+    font-size: 100%;
+}
+section p {
+   
+    font-size: 100%;
+    padding-left: 10em;
+   
+}
+
+section img {
+    text-align: center;
+    padding-left: 6em;
+    
+    
+}
+
+footer { 
+	clear: both;
+	border-top: 2px solid #8B008B;
+	padding: .75em;
+    background-image: -webkit-linear-gradient(#FFFF33 0%, #FFFF66 25%, white 100%);
+    background-image: -moz-linear-gradient(#FFFF33 0%, #FFFF66 25%, white 100%);
+    background-image: -o-linear-gradient(#FFFF33 0%, #FFFF66 25%, white 100%);
+    background-image: linear-gradient(#FFFF33 0%, #FFFF66 25%, white 100%);
+} 
+footer p {
+	font-size: 90%;
+	text-align: center;
+    color: #8B008B ;
+}
+footer a {
+    color: darkblue;
+}
+#mobile_menu {
+	display: none;
+}
+
+/* tablet portrait to standard 800 */
+@media only screen and (max-width: 800px) {
+	html { background-image: none; }
+	body { box-shadow: none; }
+    body { font-size: 90%; }
+}
+
+/* landscape orientation */
+
+@media only screen and (max-width: 747px) {
+    header img { float: left;
+    }
+    
+    /*add flex layout*/
+    section {
+        order:1;
+        width: 95%;
+        
+    }
+
+    table {
+        margin-left: 2em;
+    }
+    
+    section h2 {
+        padding-left: 1em
+    }
+    section p {
+        padding-left: 2em;
+    }
+    section img {
+        padding-left: 50em;
+        margin-left: 9;
+    }
+    header {
+        padding-bottom: 3em;
+    }
+    header h2{ font-size: 250%}
+    header h3 {font-size: 100%}
+    section img {
+        padding-left: 3em; 
+    }
+    #nav_list {
+        padding-bottom: 2em; 
+    }
+    
+    /*add flex layout*/
+    main {
+        display: flex;
+    }
+    
+    /*add flex layout*/
+    aside {
+        order 2;
+        width: 70%;
+    }
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+    
+ 
+    
+    
+    .slicknav_menu {
+		background-color: pink!important;
+	}
+ 
+
+    
+
+/* mobile portrait to mobile landscape */
+@media only screen and (max-width: 479px) {
+	section h1{ font-size: 120%; }
+    header h2{ font-size: 130%}
+    header h3 { font-size: 80%}
+}
+    header {
+        padding-bottom: 4em; 
+    }
+#nav_list {
+        margin-left: 25%;}    
+    /*110/767 times 100 */
+    section img {
+        padding-left: 3em;
+        width: 300px; 
+        max-width: 80%
+    }
