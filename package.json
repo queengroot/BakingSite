@@ -1,7 +1,9 @@
 {
   "name": "bakingsite",
   "version": "0.0.0",
-  "private": true
-  
+  "private": true,
+  "scripts": {
+    "start": "node index.html"
+  }
  
 }
