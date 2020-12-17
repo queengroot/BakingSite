@@ -8,4 +8,5 @@ http.createServer(function (req, res) {
         res.write(data);
         return res.end();
     });
-}).listen(8080);
+    //look for the port made by Heraku
+}).listen(process.env.PORT | 8080);
